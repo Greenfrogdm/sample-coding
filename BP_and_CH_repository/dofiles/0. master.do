@@ -37,9 +37,12 @@ do "$root\dofiles\5. results_by_geo.do"
 * Table 6: Results dissagregated by bargaining domain *
 do "$root\dofiles\6. robust_dimensions.do"
 
-* Table 7: Results using continuos outcomes *
-do "$root\dofiles\7. robust_other_outcomes.do"
+* Table 7: Testing additional control sets *
+do "$root\dofiles\7. robust_dimensions.do"
+
+* Table 8: Results using continuos outcomes *
+do "$root\dofiles\8. robust_other_outcomes.do"
 
 * Table 8: Testing other IV specifications *
-do "$root\dofiles\8. robust_testing_instruments.do"
+do "$root\dofiles\9. robust_testing_instruments.do"
 
