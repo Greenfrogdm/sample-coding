@@ -1,7 +1,7 @@
 clear all
 set more off
 
-global root "C:\Mariano\CIUP\Peruvian wage gap"
+global root ""
 use "$root\Output\bases\final_base.dta"
 
 local y0 = 2011
@@ -110,7 +110,10 @@ g training = (n <= `mid')
 g l_exp_1_pc = ln(exp_1_pc)
 g l_exp_5_pc = ln(exp_5_pc + 1)
 
+***************
 * Diagnostics *
+***************
+
 /*
 gen out_of_bag_error1 = .
 gen validation_error = .
@@ -154,11 +157,10 @@ xi: rforest l_exp_1_pc m_educ_years m_age p_educ_years p_age i_mother_tongue urb
 
 predict l_exp_1_rf
 
-xi: rforest exp_5_pc m_educ_years m_age p_educ_years p_age i_mother_tongue urban civil_state m_work n_hh_members ///
+xi: rforest l_exp_5_pc m_educ_years m_age p_educ_years p_age i_mother_tongue urban civil_state m_work n_hh_members ///
 	i.quintil i.region i.year if training == 1 , type(reg) iter(1000) numv(3) seed(123)
 
-predict exp_5_rf
-g l_exp_5_rf = ln(exp_5_rf)
+predict l_exp_5_rf
 
 global root "C:\Mariano\KU Leuven\2022 (feb - jun)\0. Master Thesis\I. Bargaining power and children outcomes"
 run "$root\4. dofiles\0. Processing data\globals.do"

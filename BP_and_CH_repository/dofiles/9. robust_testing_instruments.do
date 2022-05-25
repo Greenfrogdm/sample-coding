@@ -1,6 +1,6 @@
 
 ***********
-* Table 8 *
+* Table 9 *
 ***********
 
 mat results = J(11,6,.)
@@ -70,8 +70,6 @@ qui foreach y in $outcomes {
 	forval r = 1/9 {
 		mat stars[`r',2*`i'-1] = (t_stat[`r',2*`i'-1]>= 1.645)+(t_stat[`r',2*`i'-1]>= 1.96)+(t_stat[`r',2*`i'-1]>= 2.576)
 	}
-
-* Note: I might be forgetting of include siblings in the summary statistics table
 
 	local i = `i' + 1
 }

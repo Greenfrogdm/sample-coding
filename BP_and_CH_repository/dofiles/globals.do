@@ -25,8 +25,3 @@ global vars_eq1 {b1}*w_bargain - {b2}*m_educ_years - {b3}*m_work - {b4}*gender -
 
 global vars_eq2 {c1}*w_bargain - {c2}*m_educ_years - {c3}*m_work - {c4}*gender - {c5}*age_months - {c6}*i_mother_tongue - {c7}*civil_state - {c8}*p_educ_years -  {c9}*urban - {c10}*n_children_b5 - {c11}*m_age - {c12}*i_quintil2 - {c13}*i_quintil3  - {c14}*i_quintil4  - {c15}*i_quintil5 - {c16}*i_year10 - {c17}*i_year2 - {c18}*i_year3 - {c19}*i_year4 - {c20}*i_year5 - {c21}*i_year6 - {c22}*i_year7 - {c23}*i_year8 - {c24}*i_year9 - {c26}*i_region2 - {c27}*i_region3 - {c28}*i_region4 - {c29}*i_region5 - {c30}*i_region6 - {c31}*i_region7 - {c32}*i_region8 - {c33}*i_region9 - {c34}*i_region10 - {c35}*i_region11 - {c36}*i_region12 - {c37}*i_region13 - {c38}*i_region14 - {c39}*i_region15 - {c40}*i_region16 - {c41}*i_region17 - {c42}*i_region18 - {c43}*i_region19 - {c44}*i_region20 - {c45}*i_region21 - {c46}*i_region22 - {c47}*i_region23 - {c48}*i_region24 - {c25}*i_region25 - {c0}
 
-* Testing elements: i_mother_tongue civil_state p_educ_years child_number siblings urban
-* Control vars:  siblings m_age health_insurance health_insurance
-* Instrument: wtm_ratio ln_wtm_ratio
-* replace ln_wtm_ratio = ln(years_there*wtm_ratio + 1)
-

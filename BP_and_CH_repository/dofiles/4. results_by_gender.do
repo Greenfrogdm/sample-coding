@@ -54,9 +54,6 @@ qui foreach y in $outcomes {
 			}
 		}
 
-
-	* Note: I might be forgetting of include siblings in the summary statistics table
-
 	}
 	
 	* For Panel C of the table

@@ -1,7 +1,7 @@
 clear all
 set more off
 
-global root "C:\Mariano\CIUP\Peruvian wage gap"
+global root ""
 
 use "$root\Output\bases\final_base.dta"
 
@@ -10,8 +10,8 @@ keep if inrange(edad, 18, 65) // mayores de edad
 g code_province = substr(ubigeo,1,4)
 encode code_province, generate(code_province_i)
 
-local y0 = 2006 // potential y0: 2004, 2005, 2006
-local y1 = 2008
+local y0 = 2006
+local y1 = 2010
 
 g work = (mensual != .)
 local z work

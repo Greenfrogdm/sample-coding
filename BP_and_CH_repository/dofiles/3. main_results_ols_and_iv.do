@@ -78,13 +78,9 @@ qui foreach y in $outcomes {
 		mat stars[`r',4*`i'-1] = (t_stat[`r',4*`i'-1]>= 1.645)+(t_stat[`r',4*`i'-1]>= 1.96)+(t_stat[`r',4*`i'-1]>= 2.576)
 	}
 
-* Note: I might be forgetting of include siblings in the summary statistics table
-
 	local i = `i' + 1
 }
 
-
-* Insert missing values with mata to give the right format
 
 #delimit ;
 

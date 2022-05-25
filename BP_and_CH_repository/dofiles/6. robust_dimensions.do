@@ -12,7 +12,7 @@ foreach y in $outcomes {
 	
 	local z = 1
 	
-	foreach x in w_bargain v743a v743b v743c v743d v743e  { // Delete v743f
+	foreach x in w_bargain v743a v743b v743c v743d v743e  { // 
 	qui reg `y' `x' $controls $fe [pw=factor_pond], r
 
 	mat B = e(b)

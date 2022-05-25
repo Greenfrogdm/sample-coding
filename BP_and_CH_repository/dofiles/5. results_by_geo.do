@@ -50,10 +50,6 @@ qui foreach y in $outcomes {
 			mat stars_`i'_`g'[`r', `c'] = (t_stat_`i'_`g'[`r',`c']>= 1.645)+(t_stat_`i'_`g'[`r',`c']>= 1.96)+(t_stat_`i'_`g'[`r',`c']>= 2.576)
 			}
 		}
-
-
-	* Note: I might be forgetting of include siblings in the summary statistics table
-
 		
 	}
 		
